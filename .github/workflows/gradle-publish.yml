@@ -36,5 +36,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: vote-party-jar
+          name: paper-plugin-jar
           path: build/libs/*.jar
