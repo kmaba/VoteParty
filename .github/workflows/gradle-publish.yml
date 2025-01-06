@@ -12,11 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up the correct Java version
-      - name: Set up JDK
+      # Set up JDK 8
+      - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
-          java-version: '11' # Change to 8, 11, or another version as required
+          java-version: '8'
           distribution: 'temurin'
 
       # Cache Gradle dependencies
@@ -30,11 +30,11 @@ jobs:
 
       # Build the plugin
       - name: Build plugin
-        run: ./gradlew build
+        run: ./gradlew shadowJar
 
       # Upload the JAR file as an artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: paper-plugin-jar
-          path: build/libs/*.jar
+          path: build/libs/VoteParty-*.jar
