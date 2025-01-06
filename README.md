@@ -1,3 +1,5 @@
+# check releases for the jar file
+
 <img src="https://i.imgur.com/515YfKH.png">
 <h1 align="center">Welcome to VoteParty 👋</h1>
 <p>
