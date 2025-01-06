@@ -38,9 +38,9 @@ allprojects {
 	indra {
 		mitLicense()
 
-		javaVersions {
-			target(8)
-		}
+	    javaVersions {
+		target(17) // Change from 8 to 17
+	    }
 
 		github("darbyjack", "voteparty") {
 			publishing(true)
@@ -54,7 +54,7 @@ allprojects {
 	}
 
 	compileKotlin {
-		kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
+    		kotlinOptions.jvmTarget = JavaVersion.VERSION_17
 		kotlinOptions.javaParameters = true
 	}
 }
